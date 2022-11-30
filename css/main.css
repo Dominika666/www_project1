@@ -6,10 +6,26 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 82px;
+}
+
 body {
   position: relative;
   font-family: "Ubuntu", sans-serif;
-  background-color: #444;
+  background-color: #ebecf2;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 60px;
+  height: 4px;
+  background-color: #039dff;
 }
 
 .blue-text {
@@ -33,6 +49,10 @@ nav a:hover {
 }
 nav .fa-bars {
   padding: 10px;
+  color: #fff;
+}
+nav .navbar-toggler {
+  color: #fff;
 }
 nav .navbar-brand {
   font-weight: bold;
@@ -63,6 +83,26 @@ header .hero-shadow {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -10;
 }
+header .facebook {
+  position: fixed;
+  top: 80px;
+  right: -90px;
+  height: 60px;
+  width: 150px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5%;
+  z-index: 20;
+  transition: 0.3s;
+}
+header .facebook i {
+  font-size: 42px;
+  padding: 10px;
+}
+header .facebook:hover {
+  right: -30px;
+  cursor: pointer;
+}
 header .hero-text {
   display: flex;
   justify-content: center;
@@ -84,6 +124,126 @@ header .fa-chevron-down {
   color: #fff;
 }
 
+.aboutus {
+  transition: color 0.3s;
+}
+.aboutus i {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.aboutus .aboutus-card-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.aboutus .aboutus-card-text {
+  font-size: 14px;
+}
+
+.aboutus-hover:hover {
+  color: #039dff;
+  cursor: pointer;
+}
+
+.aboutus-hero {
+  position: relative;
+  background-image: url("../img/water_small.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  z-index: 0;
+}
+.aboutus-hero .aboutus-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -5;
+}
+.aboutus-hero .aboutus-hero-item {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.aboutus-hero .aboutus-hero-item i {
+  font-size: 30px;
+}
+.aboutus-hero .aboutus-hero-item .aboutus-hero-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.portfolio .carousel-item {
+  position: relative;
+  height: 550px;
+}
+.portfolio .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+}
+.portfolio .carousel-caption h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+.portfolio .carousel-indicators {
+  padding-bottom: 20px;
+}
+.portfolio .card-group h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+.portfolio .card-group p {
+  font-size: 14px;
+}
+
+.job .card-body .card-title {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.job .card-body .card-text {
+  font-size: 14px;
+}
+
+.contact {
+  transition: color 0.3s;
+}
+.contact .contact-color {
+  color: #fff;
+}
+.contact .contact-color .underline {
+  background-color: #fff;
+}
+.contact i {
+  font-size: 32px;
+}
+
+.contact-card-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-card-text {
+  font-size: 18px;
+}
+
+.contact-hover:hover {
+  color: #333;
+  cursor: pointer;
+}
+
 @media (min-width: 375px) {
   header h1 {
     font-size: 36px;
@@ -100,6 +260,15 @@ header .fa-chevron-down {
     font-size: 20px;
   }
 }
+@media (min-width: 992px) {
+  nav {
+    height: 82px;
+  }
+}
+.aboutus-hero {
+  background-image: url("../img/floor_large.jpg");
+}
+
 @media (min-width: 1200px) {
   header .hero-img {
     background-image: url("../img/koparka2.jpg");

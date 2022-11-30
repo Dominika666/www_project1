@@ -8,14 +8,30 @@
     padding: 0;
 }
 
+html {
+    scroll-padding-top: 82px;
+}
+
 body {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #444;
+    background-color: $bg-color;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
 }
 
 .blue-text {
-    color: $blue-color;
+    color: $main-color;
 }
 
 .shadow-bg {
@@ -28,15 +44,19 @@ nav {
     transition: background-color .6s;
     z-index: 1;
    a {
-    color: #fff;
+    color: $second-color;
    }
 
     a:hover {
-        color: $blue-color;
+        color: $main-color;
     }
 
     .fa-bars {
         padding: 10px;
+        color: #fff;
+    }
+    .navbar-toggler {
+        color: #fff;
     }
 
     .navbar-brand {
@@ -44,12 +64,12 @@ nav {
     }
 
     .active {
-        color: $blue-color;
+        color: $main-color;
     }
 }
 
 header {
-    color: $white;
+    color: $second-color;
 
     h1 {
         text-transform: uppercase;
@@ -74,7 +94,26 @@ header {
         z-index: -10;
         }
 
-
+    .facebook {
+        position: fixed;
+        top: 80px;
+        right: -90px;
+        height: 60px;
+        width: 150px;
+        background-color: $second-color;
+        border: 1px solid black;
+        border-radius: 5%;
+        z-index: 20;
+        transition:.3s;
+        i {
+            font-size: 42px;
+            padding: 10px;
+        }
+        }
+        .facebook:hover {
+            right: -30px;
+            cursor: pointer;
+        }
     
     .hero-text {
         display: flex;
@@ -95,10 +134,158 @@ header {
             transform: translateX(-50%);
             bottom: 20px;
             font-size: 30px;
-            color: $white;
+            color: $second-color;
             
         }
+
     }
+
+    .aboutus {
+        transition: color .3s;
+
+        i {
+        margin-top: 20px;
+        font-size: 30px;
+        }
+
+        .aboutus-card-title {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .aboutus-card-text {
+            font-size: 14px;
+        }
+    }
+
+    .aboutus-hover:hover {
+        color: $main-color;
+        cursor: pointer;
+    }
+    
+    .aboutus-hero {
+        position: relative;
+        background-image: url("../img/water_small.jpg");
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
+        color: $second-color;
+        z-index: 0;
+
+        .aboutus-shadow {
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: -5;
+        }
+
+        .aboutus-hero-item {
+            margin: 10px 0;
+            font-size: 14px;
+            
+
+            i {
+                font-size: 30px;
+            }
+            .aboutus-hero-title {
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .portfolio {
+
+        .carousel-item {
+            position: relative;
+            height: 550px;
+        }
+        .carousel-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 40px 0;
+            background-color: rgba(0, 0, 0, .8);
+            font-size: 14px;
+
+            h5 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            
+        }
+        .carousel-indicators {
+            padding-bottom: 20px;
+        }
+
+        .card-group {
+            h5 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    
+
+    .job {
+        .card-body {
+            
+            .card-title {
+               
+                font-size: 16px;
+                color: black;
+                font-weight: bold;
+                text-transform: uppercase;
+                
+            }
+           .card-text {
+            font-size: 14px;
+           }
+        }
+    }
+
+        .contact {
+            transition: color .3s;
+            .contact-color {
+                color: $second-color;
+                .underline {
+                    background-color: $second-color;
+                }
+            }
+              i {
+        font-size: 32px;
+             }
+         }
+
+    .contact-card-title {
+        font-size: 16px;
+        color: $second-color;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .contact-card-text {
+        font-size: 18px;
+    }
+
+
+.contact-hover:hover {
+    color: #333;
+    cursor: pointer;
+}
+   
+
 
     
 @media(min-width: 375px) {
@@ -111,6 +298,10 @@ header {
             }
             }
         }
+
+
+
+
  @media(min-width: 768px) {
             header {
                 h1 {
@@ -121,8 +312,18 @@ header {
                 }
                 }
             }
-    
 
+@media(min-width: 992px) {
+            nav {
+                  height: 82px;
+                }
+
+            }
+
+            .aboutus-hero {
+                
+                background-image: url("../img/floor_large.jpg");
+            }
 
 
 @media(min-width: 1200px) {
